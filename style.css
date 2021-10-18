@@ -1,0 +1,166 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	color: black;
+}
+header {
+	height: 70px;
+}
+header h1 {
+	display: inline-block;
+	float: left;
+	padding: 16px 24px;
+	text-transform: uppercase;
+}
+header h1 a{
+	transition: 3s;
+}
+header h1 a:hover {
+	color: skyblue;
+}
+header ul {
+	float: right;
+}
+header ul li {
+	padding: 24px ;
+	display: inline-block;
+}
+header ul li a:hover{
+	color: skyblue;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.mobile-menu {
+	float: right;
+	display: none;
+	padding: 18px;
+}
+.mobile-menu:hover {
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width: 300px;
+	background-color: rgba(16, 47, 80, .9);
+	transition: .3s;
+}
+.sidebar ul li a {
+	color: whitesmoke;										
+}
+.sidebar ul li {
+	padding: 24px;
+	transition: .3s;
+}
+.sidebar ul li:hover{
+	background-color: gray;
+}
+#check:checked ~ .sidebar {
+	left: 0;
+}
+.banner {
+	background-color: #01DFA5;
+	padding: 100px 0;
+}
+section {
+	padding: 50px 0;
+}
+.banner img {
+	width: 200px;
+	border-radius: 20px;
+	box-shadow: 0 6px 10px #ddd;
+	margin-bottom: 10px;
+
+}
+.banner h2,
+.banner p {
+	color: white;
+}
+.banner h2{
+	margin-bottom: 10px;
+}
+.banner p{
+	font-size: 18px;
+}
+.banner-left{
+	padding-left: 24px;
+}
+section h3 {
+	padding-bottom: 20px;
+	text-align: center;
+	margin: 20px;
+	position: relative;
+}
+section h3::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 120px;
+	height: 1px;
+	background-color: green;
+	left: calc(50% - 60px);
+}
+section h3::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -1px;
+	width: 40px;
+	height: 4px;
+	background-color: skyblue;
+	left: calc(50% - 20px);
+}
+#about p {
+	text-align: justify;
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+#skills {
+	background-color: #D8D8D8;
+}
+#skills .bar {
+	height: 30px;
+	background-color: white;
+	background-color: #D8D8D8;
+	border: 2px  ;
+}
+
+@media (max-width: 786px){
+	.mobile-menu{
+		display: block;
+	}
+	header ul {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
